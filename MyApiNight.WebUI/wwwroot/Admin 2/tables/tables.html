@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Yönetim Paneli - Kaiadmin Bootstrap 5 Admin Dashboard</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="icon"
+      href="../assets/img/kaiadmin/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Yazı Tipleri ve Simgeler -->
+    <script src="../assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["../assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
+
+    <!-- CSS Dosyaları -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="../assets/css/kaiadmin.min.css" />
+
+    <!-- Demo için ekstra CSS, projeye eklemeyin -->
+    <link rel="stylesheet" href="../assets/css/demo.css" />
+</head>
+
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="dark">
+              <a href="../index.html" class="logo">
+                  <img
+                      src="../assets/img/kaiadmin/logo_light.svg"
+                      alt="Yönetim Paneli Logosu"
+                      class="navbar-brand"
+                      height="20"
+                  />
+              </a>
+              <div class="nav-toggle">
+                  <!-- Sidebar Daralt Butonu -->
+                  <button class="btn btn-toggle toggle-sidebar" title="Menüyü Daralt">
+                      <i class="gg-menu-right"></i>
+                  </button>
+                  <!-- Sidebar Genişlet Butonu -->
+                  <button class="btn btn-toggle sidenav-toggler" title="Menüyü Genişlet">
+                      <i class="gg-menu-left"></i>
+                  </button>
+              </div>
+              <!-- Üst Menü Butonu -->
+              <button class="topbar-toggler more" title="Daha Fazla">
+                  <i class="gg-more-vertical-alt"></i>
+              </button>
+          </div>
+          <!-- End Logo Header -->
+      </div>
+      
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+              <ul class="nav">
+                <!-- Dashboard -->
+                <li class="nav-item">
+                    <a data-bs-toggle="collapse" href="#dashboard" class="collapsed" aria-expanded="false">
+                        <i class="fas fa-home"></i>
+                        <p>Kontrol Paneli</p>
+                        <span class="caret"></span>
+                    </a>
+                    <div class="collapse" id="dashboard">
+                        <ul class="nav nav-collapse">
+                            <li>
+                                <a href="/Admin/Dashboard">
+                                    <span class="sub-item">Genel Bakış</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            
+                <!-- Kategoriler -->
+                <li class="nav-item">
+                    <a href="/Admin/Categories">
+                        <i class="fas fa-list"></i>
+                        <p>Kategoriler</p>
+                    </a>
+                </li>
+            
+                <!-- Özellikler -->
+                <li class="nav-item">
+                    <a href="/Admin/Features">
+                        <i class="fas fa-cogs"></i>
+                        <p>Özellikler</p>
+                    </a>
+                </li>
+            
+                <!-- Ürünler -->
+                <li class="nav-item">
+                    <a href="/Admin/Products">
+                        <i class="fas fa-box"></i>
+                        <p>Ürünler</p>
+                    </a>
+                </li>
+            
+                <!-- Öne Çıkan Ürünler -->
+                <li class="nav-item">
+                    <a href="/Admin/FeatureProduct">
+                        <i class="fas fa-star"></i>
+                        <p>Öne Çıkan Ürünler</p>
+                    </a>
+                </li>
+            
+                <!-- Yazarlar -->
+                <li class="nav-item">
+                    <a href="/Admin/Writers">
+                        <i class="fas fa-user-edit"></i>
+                        <p>Yazarlar</p>
+                    </a>
+                </li>
+                <!-- Ayarlar -->
+                <li class="nav-item">
+                    <a href="/Admin/Settings">
+                        <i class="fas fa-cog"></i>
+                        <p>Ayarlar</p>
+                    </a>
+                </li>
+            
+                <!-- Kullanıcı Yönetimi -->
+                <li class="nav-item">
+                    <a href="/Admin/Users">
+                        <i class="fas fa-users"></i>
+                        <p>Kullanıcılar</p>
+                    </a>
+                </li>
+            
+                <!-- Belgeler -->
+                <li class="nav-item">
+                    <a href="/Admin/Documentation">
+                        <i class="fas fa-file"></i>
+                        <p>Belgeler</p>
+                    </a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+              <!-- Logo Header -->
+              <div class="logo-header" data-background-color="dark">
+                  <a href="../index.html" class="logo">
+                      <img src="../assets/img/kaiadmin/logo_light.svg" alt="Navbar Logo" class="navbar-brand" height="20" />
+                  </a>
+                  <div class="nav-toggle">
+                      <button class="btn btn-toggle toggle-sidebar">
+                          <i class="gg-menu-right"></i>
+                      </button>
+                      <button class="btn btn-toggle sidenav-toggler">
+                          <i class="gg-menu-left"></i>
+                      </button>
+                  </div>
+                  <button class="topbar-toggler more">
+                      <i class="gg-more-vertical-alt"></i>
+                  </button>
+              </div>
+              <!-- End Logo Header -->
+          </div>
+      
+          <!-- Navbar Header -->
+          <nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+              <div class="container-fluid">
+                  <!-- Arama Kutusu -->
+                  <div class="navbar-form nav-search d-none d-lg-flex">
+                      <div class="input-group">
+                          <div class="input-group-prepend">
+                              <button type="submit" class="btn btn-search pe-1">
+                                  <i class="fa fa-search search-icon"></i>
+                              </button>
+                          </div>
+                          <input type="text" placeholder="Arama yapın..." class="form-control" />
+                      </div>
+                  </div>
+      
+                  <!-- Navbar Sağ Menü -->
+                  <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+                      <!-- Mesajlar -->
+                      <li class="nav-item topbar-icon dropdown hidden-caret">
+                          <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-envelope"></i>
+                          </a>
+                          <ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+                              <li>
+                                  <div class="dropdown-title d-flex justify-content-between align-items-center">
+                                      Mesajlar
+                                      <a href="#" class="small">Tümünü okundu olarak işaretle</a>
+                                  </div>
+                              </li>
+                              <li>
+                                  <div class="notif-center">
+                                      <a href="#">
+                                          <div class="notif-img">
+                                              <img src="../assets/img/jm_denis.jpg" alt="Profil Resmi" />
+                                          </div>
+                                          <div class="notif-content">
+                                              <span class="subject">Jimmy Denis</span>
+                                              <span class="block">Nasılsın?</span>
+                                              <span class="time">5 dakika önce</span>
+                                          </div>
+                                      </a>
+                                  </div>
+                              </li>
+                              <li>
+                                  <a class="see-all" href="javascript:void(0);">Tüm mesajları gör <i class="fa fa-angle-right"></i></a>
+                              </li>
+                          </ul>
+                      </li>
+      
+                      <!-- Bildirimler -->
+                      <li class="nav-item topbar-icon dropdown hidden-caret">
+                          <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button"
+                              data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <i class="fa fa-bell"></i>
+                              <span class="notification">1</span>
+                          </a>
+                          <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+                              <li>
+                                  <div class="dropdown-title">1 yeni bildiriminiz var</div>
+                              </li>
+                              <li>
+                                  <div class="notif-center">
+                                      <a href="#">
+                                          <div class="notif-icon notif-success">
+                                              <i class="fa fa-info-circle"></i>
+                                          </div>
+                                          <div class="notif-content">
+                                              <span class="block">Sistem güncellemesi başarıyla tamamlandı.</span>
+                                              <span class="time">5 dakika önce</span>
+                                          </div>
+                                      </a>
+                                  </div>
+                              </li>
+                              <li>
+                                  <a class="see-all" href="javascript:void(0);">Tüm bildirimleri gör <i class="fa fa-angle-right"></i></a>
+                              </li>
+                          </ul>
+                      </li>
+      
+                      <!-- Profil Menüsü -->
+                      <li class="nav-item topbar-user dropdown hidden-caret">
+                          <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                              <div class="avatar-sm">
+                                  <img src="../assets/img/profile.jpg" alt="Profil Resmi" class="avatar-img rounded-circle" />
+                              </div>
+                              <span class="profile-username">
+                                  <span class="op-7">Merhaba,</span>
+                                  <span class="fw-bold">Onur</span>
+                              </span>
+                          </a>
+                          <ul class="dropdown-menu dropdown-user animated fadeIn">
+                              <li>
+                                  <div class="user-box">
+                                      <div class="avatar-lg">
+                                          <img src="../assets/img/profile.jpg" alt="Profil Resmi" class="avatar-img rounded" />
+                                      </div>
+                                      <div class="u-text">
+                                          <h4>Onur Hacıosmanoğlu</h4>
+                                          <p class="text-muted">onur@example.com</p>
+                                          <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">Profili Görüntüle</a>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li>
+                                  <a class="dropdown-item" href="#">Ayarlar</a>
+                                  <a class="dropdown-item" href="#">Çıkış Yap</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+              </div>
+          </nav>
+          <!-- End Navbar -->
+       </div>
+      
+
+        
+
+        <footer class="footer">
+          <div class="container-fluid d-flex justify-content-between">
+            <nav class="pull-left">
+              <ul class="nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="http://www.themekita.com">
+                    ThemeKita
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Help </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"> Licenses </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="copyright">
+              2024, made with <i class="fa fa-heart heart text-danger"></i> by
+              <a href="http://www.themekita.com">ThemeKita</a>
+            </div>
+            <div>
+              Distributed by
+              <a target="_blank" href="https://themewagon.com/">ThemeWagon</a>.
+            </div>
+          </div>
+        </footer>
+      </div>
+
+    </div>
+    <!--   Core JS Files   -->
+    <script src="../assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="../assets/js/core/popper.min.js"></script>
+    <script src="../assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="../assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <!-- Kaiadmin JS -->
+    <script src="../assets/js/kaiadmin.min.js"></script>
+    <!-- Kaiadmin DEMO methods, don't include it in your project! -->
+    <script src="../assets/js/setting-demo2.js"></script>
+    <script>
+      $("#displayNotif").on("click", function () {
+        var placementFrom = $("#notify_placement_from option:selected").val();
+        var placementAlign = $("#notify_placement_align option:selected").val();
+        var state = $("#notify_state option:selected").val();
+        var style = $("#notify_style option:selected").val();
+        var content = {};
+
+        content.message =
+          'Turning standard Bootstrap alerts into "notify" like notifications';
+        content.title = "Bootstrap notify";
+        if (style == "withicon") {
+          content.icon = "fa fa-bell";
+        } else {
+          content.icon = "none";
+        }
+        content.url = "index.html";
+        content.target = "_blank";
+
+        $.notify(content, {
+          type: state,
+          placement: {
+            from: placementFrom,
+            align: placementAlign,
+          },
+          time: 1000,
+        });
+      });
+    </script>
+  </body>
+</html>

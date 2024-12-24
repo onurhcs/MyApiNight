@@ -1,0 +1,69 @@
+﻿@model List<MyApiNight.WebUI.Dtos.Article.ResultArticleDto>
+
+<section id="latest-blog" class="py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+
+                <!-- Bölüm Başlığı -->
+                <div class="section-header align-center">
+                    <div class="title">
+                        <span>Makalelerimizi Okuyun</span>
+                    </div>
+                    <h2 class="section-title">Son Makaleler</h2>
+                </div>
+
+                <div class="row">
+                    @if (Model != null && Model.Any())
+                    {
+                        int delay = 0;
+                        foreach (var article in Model.OrderBy(x => Guid.NewGuid()).Take(3))
+                        {
+                            <div class="col-md-4">
+                                <article class="column" data-aos="fade-up" data-aos-delay="@delay">
+                                    <figure>
+                                        <a href="/Articles/Detail/@article.ArticlesId" class="image-hvr-effect">
+                                            <img src="@article.ImageUrl" alt="@article.Title" class="post-image" style="height: 250px; object-fit: cover;">
+                                        </a>
+                                    </figure>
+                                    <div class="post-item">
+                                        <div class="meta-date">@article.PublishDate.ToString("dd MMMM yyyy")</div>
+                                        <h3><a href="/Articles/Detail/@article.ArticlesId">@article.Title</a></h3>
+                                        <h3><a href="/Articles/Detail/@article.ArticlesId">@article.Content</a></h3>
+                                        <div class="links-element">
+                                            <div class="categories">@article.Category</div>
+                                            <div class="social-links">
+                                                <ul>
+                                                    <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                                                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa-brands fa-behance"></i></a></li>
+                                                </ul>
+                                            </div>
+                                        </div><!-- links-element -->
+                                    </div>
+                                </article>
+                            </div>
+                            delay += 200; // Animasyon gecikmesi için
+                        }
+                    }
+                    else
+                    {
+                        <div class="col-12 text-center">
+                            <p class="text-muted">Henüz makale bulunmamaktadır.</p>
+                        </div>
+                    }
+                </div>
+
+                <!-- Tüm Makaleleri Gör Butonu -->
+                <div class="row">
+                    <div class="btn-wrap align-center">
+                        <a href="/Articles/ArticleList" class="btn btn-outline-accent btn-accent-arrow" tabindex="0">
+                            Tüm Makaleleri Gör <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,92 @@
+﻿@model List<MyApiNight.WebUI.Dtos.Features.ResultFeatureDto>
+
+@{
+    ViewData["Title"] = "Özellikler Listesi";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="container">
+    <div class="page-inner">
+        <div class="page-header">
+            <h3 class="fw-bold mb-3">Özellikler Listesi</h3>
+            <ul class="breadcrumbs mb-3">
+                <li class="nav-home">
+                    <a href="/Admin/Dashboard">
+                        <i class="icon-home"></i>
+                    </a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="/Admin/Features">Özellikler</a>
+                </li>
+                <li class="separator">
+                    <i class="icon-arrow-right"></i>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Özellikler Listesi</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="container-fluid pt-4 px-4">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="card-title mb-0">📊 Özellikler Tablosu</h5>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-subtitle mb-3 text-muted">
+                                Aşağıdaki tablo, tüm ekran genişliğini kaplar ve küçük cihazlarda yatay kaydırma sağlar.
+                            </p>
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-hover text-center align-middle">
+                                    <thead class="table-primary">
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Özellik Adı</th>
+                                            <th>İşlemler</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @if (Model != null && Model.Any())
+                                        {
+                                            int counter = 1;
+                                            foreach (var item in Model)
+                                            {
+                                                <tr>
+                                                    <th scope="row">@counter</th>
+                                                    <td>@item.Name</td>
+                                                    <td>
+                                                        <a href="/Features/DeleteFeature/@item.FeatureId" class="btn btn-danger btn-sm">
+                                                            <i class="fa fa-trash"></i> Sil
+                                                        </a>
+                                                        <a href="/Features/UpdateFeature/@item.FeatureId" class="btn btn-primary btn-sm">
+                                                            <i class="fa fa-edit"></i> Güncelle
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                counter++;
+                                            }
+                                        }
+                                        else
+                                        {
+                                            <tr>
+                                                <td colspan="3" class="text-center text-muted">Özellik bulunamadı.</td>
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="card-footer text-muted text-end">
+                            Toplam @(Model?.Count ?? 0) Kayıt
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

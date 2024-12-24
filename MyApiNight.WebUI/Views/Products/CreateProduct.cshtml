@@ -1,0 +1,125 @@
+﻿@model MyApiNight.WebUI.Dtos.CreatePrdoductDto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ürün Ekle</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Sayfa Arkaplanı */
+        body {
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Kart Tasarımı */
+        .product-form-container {
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background: #4a69bd;
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        /* Form Alanları */
+        .form-label {
+            font-weight: 500;
+        }
+
+        .form-control {
+            border-radius: 6px;
+        }
+
+            .form-control:focus {
+                border-color: #4a69bd;
+                box-shadow: 0 0 5px rgba(74, 105, 189, 0.5);
+            }
+
+        /* Buton Tasarımı */
+        .btn-submit {
+            background: #38ada9;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+            .btn-submit:hover {
+                background: #079992;
+            }
+
+        /* Footer Link */
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .form-footer a {
+                text-decoration: none;
+                color: #4a69bd;
+                font-weight: bold;
+            }
+
+                .form-footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+
+    <div class="container product-form-container">
+        <div class="card">
+            <div class="card-header">
+                ➕ Yeni Ürün Ekle
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <div class="mb-3">
+                        <label for="ProductName" class="form-label">Ürün Adı</label>
+                        <input asp-for="ProductName" class="form-control" id="ProductName" type="text" placeholder="Ürün adını giriniz" />
+                        <span asp-validation-for="ProductName" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ProductStock" class="form-label">Stok Miktarı</label>
+                        <input asp-for="ProductStock" class="form-control" id="ProductStock" type="number" placeholder="Stok miktarını giriniz" />
+                        <span asp-validation-for="ProductStock" class="text-danger"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="ProductPrice" class="form-label">Ürün Fiyatı</label>
+                        <input asp-for="ProductPrice" class="form-control" id="ProductPrice" type="number" step="0.01" placeholder="Ürün fiyatını giriniz" />
+                        <span asp-validation-for="ProductPrice" class="text-danger"></span>
+                    </div>
+                    <button type="submit" class="btn btn-submit w-100">✅ Ürünü Ekle</button>
+                </form>
+            </div>
+            <div class="form-footer">
+                <a href="/Products/Index">← Ürün Listesine Dön</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

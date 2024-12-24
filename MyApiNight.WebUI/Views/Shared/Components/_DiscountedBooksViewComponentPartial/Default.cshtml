@@ -1,0 +1,41 @@
+﻿@model List<MyApiNight.WebUI.Dtos.ResultProductDto>
+
+<section id="special-offer" class="bookshelf pb-5 mb-5">
+
+	<!-- Bölüm Başlığı -->
+	<div class="section-header align-center">
+		<div class="title">
+			<span>Fırsatı Kaçırmayın</span>
+		</div>
+		<h2 class="section-title">İndirimli Kitaplar</h2>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="inner-content">
+				<div class="product-list" data-aos="fade-up">
+					<div class="grid product-grid">
+						@foreach (var item in Model)
+						{
+							<!-- Ürün 1 -->
+							<div class="product-item">
+								<figure class="product-style">
+									<img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+								</figure>
+								<figcaption>
+									<h3>@item.ProductName</h3>
+									<span>@item.WriterName</span>
+									<div class="item-price">
+										<span class="prev-price">₺ @item.ProductPrice </span> ₺ @item.DiscountedPrice
+									</div>
+								</figcaption>
+							</div>
+
+						}
+					</div><!--grid-->
+				</div>
+			</div><!--inner-content-->
+		</div>
+	</div>
+</section>

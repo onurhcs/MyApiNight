@@ -1,0 +1,49 @@
+﻿<!-- Core JS Files -->
+<script src="~/admin 2/assets/js/core/jquery-3.7.1.min.js"></script>
+<script src="~/admin 2/assets/js/core/popper.min.js"></script>
+<script src="~/admin 2/assets/js/core/bootstrap.min.js"></script>
+
+<!-- jQuery Scrollbar -->
+<script src="~/admin 2/assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+<!-- Bootstrap Notify (Eğer Kullanıyorsanız) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-notify/0.2.0/js/bootstrap-notify.min.js"></script>
+
+<!-- Kaiadmin Ana JS Dosyası -->
+<script src="~/admin 2/assets/js/kaiadmin.min.js"></script>
+
+<!-- Kaiadmin DEMO methods (Üretim ortamında kaldırın) -->
+<script src="~/admin 2/assets/js/setting-demo2.js"></script>
+
+<!-- Bildirim (Notify) Ayarları -->
+<script>
+    $(document).ready(function () {
+        $("#displayNotif").on("click", function () {
+            var placementFrom = $("#notify_placement_from option:selected").val();
+            var placementAlign = $("#notify_placement_align option:selected").val();
+            var state = $("#notify_state option:selected").val();
+            var style = $("#notify_style option:selected").val();
+            var content = {};
+
+            content.message =
+                'Turning standard Bootstrap alerts into "notify" like notifications';
+            content.title = "Bootstrap Notify";
+            if (style === "withicon") {
+                content.icon = "fa-solid fa-bell";
+            } else {
+                content.icon = "none";
+            }
+            content.url = "index.html";
+            content.target = "_blank";
+
+            $.notify(content, {
+                type: state,
+                placement: {
+                    from: placementFrom,
+                    align: placementAlign,
+                },
+                delay: 1000,
+            });
+        });
+    });
+</script>

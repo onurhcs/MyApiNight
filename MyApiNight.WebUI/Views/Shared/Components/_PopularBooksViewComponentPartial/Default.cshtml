@@ -1,0 +1,144 @@
+﻿@model List<MyApiNight.WebUI.Dtos.ResultProductDto>
+
+
+<section id="popular-books" class="bookshelf py-5 my-5">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+
+				<!-- Bölüm Başlığı -->
+				<div class="section-header align-center">
+					<div class="title">
+						<span>Seçkin Kitaplar</span>
+					</div>
+					<h2 class="section-title">Popüler Kitaplar</h2>
+				</div>
+
+				<!-- Sekmeler -->
+				<ul class="tabs">
+					@foreach (var item in Model)
+					{
+						<li data-tab-target="#all-genre" class="active tab">@item.CategoryName</li>
+						
+					}
+					
+				</ul>
+
+				<!-- Sekme İçerikleri -->
+				<div class="tab-content">
+					<!-- Tüm Türler -->
+					<div id="all-genre" data-tab-content class="active">
+						<div class="row">
+							@foreach (var item in Model)
+							{
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>@item.ProductName</h3>
+											<span>@item.WriterName</span>
+											<div class="item-price">₺ @item.ProductPrice</div>
+										</figcaption>
+									</div>
+								</div>
+							}
+						</div>
+					</div>
+
+					<!-- İş Dünyası -->
+					<div id="business" data-tab-content>
+						<div class="row">
+							@foreach (var item in Model.Where(b => b.CategoryName == "1"))
+							{
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>@item.ProductName</h3>
+											<span>@item.WriterName</span>
+											<div class="item-price">₺ @item.ProductPrice.ToString("F2")</div>
+										</figcaption>
+									</div>
+								</div>
+							}
+
+						</div>
+					</div>
+
+					<!-- Teknoloji -->
+					<div id="technology" data-tab-content>
+						<div class="row">
+							@foreach (var item in Model.Where(b => b.CategoryName == "2"))
+							{
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>@item.ProductName</h3>
+											<span>@item.WriterName</span>
+											<div class="item-price">₺ @item.ProductPrice.ToString("F2")</div>
+										</figcaption>
+									</div>
+								</div>
+							}
+						</div>
+					</div>
+
+					<!-- Romantik -->
+					<div id="romantic" data-tab-content>
+						<div class="row">
+							@foreach (var item in Model.Where(b => b.CategoryName == "3"))
+							{
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>@item.ProductName</h3>
+											<span>@item.WriterName</span>
+											<div class="item-price">₺ @item.ProductPrice.ToString("F2")</div>
+										</figcaption>
+									</div>
+								</div>
+							}
+						</div>
+					</div>
+
+					<!-- Macera -->
+					<div id="adventure" data-tab-content>
+						<div class="row">
+							@foreach (var item in Model.Where(b => b.CategoryName == "6"))
+							{
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>@item.ProductName</h3>
+											<span>@item.WriterName</span>
+											<div class="item-price">₺ @item.ProductPrice.ToString("F2")</div>
+										</figcaption>
+									</div>
+								</div>
+							}
+						</div>
+					</div>
+
+				</div><!-- Tab İçerikleri Bitiş -->
+			</div>
+		</div>
+	</div>
+</section>

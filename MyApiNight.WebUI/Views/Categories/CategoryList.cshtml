@@ -1,0 +1,88 @@
+﻿@model List<MyApiNight.WebUI.Dtos.Category.ResultCategoryDto>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kategori Listesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .category-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+            .category-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+        .category-container {
+            margin: 30px auto;
+        }
+
+        .category-title {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .category-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .category-id {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6c757d;
+        }
+
+        .add-category-btn {
+            margin: 20px 0;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container category-container">
+        <h1 class="category-title">📂 Kategori Listesi</h1>
+
+        <!-- Yeni Kategori Ekle Butonu -->
+        <div class="add-category-btn">
+            <a href="/Categories/CreateCategory" class="btn btn-success btn-lg">+ Yeni Kategori Ekle</a>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            @foreach (var item in Model)
+            {
+                <div class="col">
+                    <div class="card category-card h-100 text-center">
+                        <div class="card-body">
+                            <span class="category-id">ID: @item.CategoryId</span>
+                            <h5 class="card-title mt-2">@item.CategoryName</h5>
+                        </div>
+                        <div class="category-actions">
+                            <a href="/Categories/DeleteCategory/@item.CategoryId" class="btn btn-danger btn-sm">Sil</a>
+                            <a href="/Categories/UpdateCategory/@item.CategoryId" class="btn btn-primary btn-sm">Güncelle</a>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

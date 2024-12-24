@@ -1,0 +1,55 @@
+﻿@model List<MyApiNight.WebUI.Dtos.ResultProductDto>
+
+@if (Model != null && Model.Any())
+{
+    var item = Model.FirstOrDefault();
+     <!-- İlk ürün çekiliyor -->
+
+    <section id="best-selling" class="leaf-pattern-overlay">
+        <div class="corner-pattern-overlay"></div>
+        <div class="container">
+            <div class="row justify-content-center">
+
+                <div class="col-md-8">
+                    <div class="row">
+                        <!-- Kitap Görseli -->
+                        <div class="col-md-6">
+                            <figure class="products-thumb">
+                                <img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+                            </figure>
+                        </div>
+
+                        <!-- Kitap Detayları -->
+                        <div class="col-md-6">
+                            <div class="product-entry">
+                                <h2 class="section-title divider">En Çok Satan Kitap</h2>
+
+                                <div class="products-content">
+                                    <div class="author-name">Yazar: @item.WriterName</div>
+                                    <h3 class="item-title">@item.ProductName</h3>
+                                    <p>
+                                        @(item.ProductDescription.Length > 50
+                                            ? item.ProductDescription.Substring(0, 50) + "..."
+                                            : item.ProductDescription)
+                                    </p>
+                                    <div class="item-price">₺ @item.ProductPrice</div>
+                                    <div class="btn-wrap">
+                                        <a href="#" class="btn-accent-arrow">
+                                            Hemen Satın Al <i class="icon icon-ns-arrow-right"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+}
+else
+{
+    <p class="text-center text-warning">📚 Ürün bulunamadı.</p>
+}

@@ -1,0 +1,98 @@
+﻿@model List<MyApiNight.WebUI.Dtos.Writers.ResultWriterDto>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yazar Listesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        .writer-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+            .writer-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            }
+
+        .writer-container {
+            margin: 30px auto;
+        }
+
+        .writer-title {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .writer-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            padding: 10px 0;
+        }
+
+        .writer-id {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #6c757d;
+        }
+
+        .add-writer-btn {
+            margin: 20px 0;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container writer-container">
+        <h1 class="writer-title">✍️ Yazar Listesi</h1>
+
+        <!-- Yeni Yazar Ekle Butonu -->
+        <div class="add-writer-btn">
+            <a href="/Writers/CreateWriter" class="btn btn-success btn-lg">+ Yeni Yazar Ekle</a>
+        </div>
+
+        @if (Model == null || !Model.Any())
+        {
+            <div class="alert alert-warning text-center" role="alert">
+                📚 Henüz kayıtlı bir yazar bulunmamaktadır.
+            </div>
+        }
+        else
+        {
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                @foreach (var item in Model)
+                {
+                    <div class="col">
+                        <div class="card writer-card h-100 text-center">
+                            <div class="card-body">
+                                <span class="writer-id">ID: @item.WriterId</span>
+                                <h5 class="card-title mt-2">Adı: @item.WriterName</h5>
+                                <h5 class="card-title mt-2">Soyadı: @item.WriterSurname</h5>
+                            </div>
+                            <div class="writer-actions">
+                                <a href="/Writers/DeleteWriter/@item.WriterId" class="btn btn-danger btn-sm">Sil</a>
+                                <a href="/Writers/UpdateWriter/@item.WriterId" class="btn btn-primary btn-sm">Güncelle</a>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

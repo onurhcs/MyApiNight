@@ -1,0 +1,100 @@
+﻿<nav class="navbar navbar-header navbar-header-transparent navbar-expand-lg border-bottom">
+    <div class="container-fluid">
+        <!-- Arama Kutusu -->
+        <div class="navbar-form nav-search d-none d-lg-flex">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button type="submit" class="btn btn-search pe-1">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <input type="text" placeholder="Arama yapın..." class="form-control" />
+            </div>
+        </div>
+
+        <!-- Navbar Sağ Menü -->
+        <ul class="navbar-nav topbar-nav ms-md-auto align-items-center">
+            <!-- Mesajlar -->
+            <li class="nav-item topbar-icon dropdown hidden-caret">
+                <a class="nav-link dropdown-toggle" href="#" id="messageDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <ul class="dropdown-menu messages-notif-box animated fadeIn" aria-labelledby="messageDropdown">
+                    <li>
+                        <div class="dropdown-title d-flex justify-content-between align-items-center">
+                            Mesajlar
+                            <a href="#" class="small">Tümünü okundu olarak işaretle</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="notif-center">
+                            <a href="#">
+                                <div class="notif-img">
+                                    <img src="~/admin 2/assets/img/jm_denis.jpg" alt="Profil Resmi" />
+                                </div>
+                                <div class="notif-content">
+                                    <span class="subject">Jimmy Denis</span>
+                                    <span class="block">Nasılsın?</span>
+                                    <span class="time">5 dakika önce</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="see-all" href="javascript:void(0);">Tüm mesajları gör <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Bildirimler -->
+            <li class="nav-item topbar-icon dropdown hidden-caret">
+                <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button"
+                   data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="notification">1</span>
+                </a>
+                <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+                    <li>
+                        <div class="dropdown-title">1 yeni bildiriminiz var</div>
+                    </li>
+                    <li>
+                        <div class="notif-center">
+                            <a href="#">
+                                <div class="notif-icon notif-success">
+                                    <i class="fa-solid fa-info-circle"></i>
+                                </div>
+                                <div class="notif-content">
+                                    <span class="block">Sistem güncellemesi başarıyla tamamlandı.</span>
+                                    <span class="time">5 dakika önce</span>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <a class="see-all" href="javascript:void(0);">Tüm bildirimleri gör <i class="fa-solid fa-angle-right"></i></a>
+                    </li>
+                </ul>
+            </li>
+
+            <!-- Profil Menüsü -->
+            <li class="nav-item topbar-user dropdown hidden-caret">
+                <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                    <div class="avatar-sm">
+                        <img src="~/admin 2/assets/img/profile.jpg" alt="Profil Resmi" class="avatar-img rounded-circle" />
+                    </div>
+                    <span class="profile-username">
+                        <span class="op-7">Merhaba,</span>
+                        <span class="fw-bold">Onur</span>
+                    </span>
+                </a>
+                <ul class="dropdown-menu dropdown-user animated fadeIn">
+                    <li>
+                        <a class="dropdown-item" href="#">Ayarlar</a>
+                        <a class="dropdown-item" href="#">Çıkış Yap</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</nav>

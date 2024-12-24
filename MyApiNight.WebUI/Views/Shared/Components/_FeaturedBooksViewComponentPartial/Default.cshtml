@@ -1,0 +1,58 @@
+﻿@model List<MyApiNight.WebUI.Dtos.ResultProductDto>
+
+<section id="featured-books" class="py-5 my-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <!-- Bölüm Başlığı -->
+                <div class="section-header align-center">
+                    <div class="title">
+                        <span>Seçkin Ürünler</span>
+                    </div>
+                    <h2 class="section-title">Öne Çıkan Kitaplar</h2>
+                </div>
+
+                <!-- Ürün Listesi -->
+                <div class="product-list" data-aos="fade-up">
+                    <div class="row">
+                        @if (Model == null || !Model.Any())
+                        {
+                            <div class="col-12 text-center">
+                                <div class="alert alert-warning">📚 Henüz ürün bulunmamaktadır.</div>
+                            </div>
+                        }
+                        else
+                        {
+                            @foreach (var item in Model.OrderBy(x => Guid.NewGuid()).Take(4))
+                            {
+                                <div class="col-md-3 mb-4">
+                                    <div class="product-item">
+                                        <figure class="product-style">
+                                            <img src="@item.ProductImageUrl" alt="Kitap" class="product-item">
+                                            <button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+                                        </figure>
+                                        <figcaption>
+                                            <h5>@item.ProductName</h5>
+                                            <small>Yazar: @item.WriterName</small>
+                                            <div class="item-price">₺ @item.ProductPrice</div>
+                                        </figcaption>
+                                    </div>
+                                </div>
+
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tüm Ürünleri Gör Butonu -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="btn-wrap align-right">
+                    <a href="#" class="btn-accent-arrow">Tüm Ürünleri Gör <i class="icon icon-ns-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

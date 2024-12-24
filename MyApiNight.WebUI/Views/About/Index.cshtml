@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+@await Component.InvokeAsync("_FeaturedBooksViewComponentPartial")
+
+@await Component.InvokeAsync("_BestSellerViewComponentPartial")
+
+@await Component.InvokeAsync("_PopularBooksViewComponentPartial")
+
+@await Component.InvokeAsync("_DiscountedBooksViewComponentPartial")
+
+
+@await Component.InvokeAsync("_ArticleViewComponentParital")
+
+
+
+

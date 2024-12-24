@@ -1,0 +1,116 @@
+﻿@model MyApiNight.WebUI.Dtos.Writers.UpdateWriterDto
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yazar Güncelle</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        /* Sayfa Arkaplanı */
+        body {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Kart Tasarımı */
+        .writer-form-container {
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background: #6c5ce7;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        /* Form Alanları */
+        .form-label {
+            font-weight: 500;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            background: #00b894;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+            .btn-submit:hover {
+                background: #019874;
+            }
+
+        /* Footer Link */
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .form-footer a {
+                text-decoration: none;
+                color: #6c5ce7;
+                font-weight: bold;
+            }
+
+                .form-footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="container writer-form-container">
+        <div class="card">
+            <div class="card-header">
+                🛠️ Yazar Güncelle
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <!-- Gizli Yazar Kimliği -->
+                    <input type="hidden" asp-for="WriterId" />
+
+                    <div class="mb-4">
+                        <label for="WriterName" class="form-label">Yazar Adı</label>
+                        <input asp-for="WriterName" class="form-control" id="WriterName" type="text" placeholder="Yazar adını giriniz" />
+                        <span asp-validation-for="WriterName" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="WriterSurname" class="form-label">Yazar Soyadı</label>
+                        <input asp-for="WriterSurname" class="form-control" id="WriterSurname" type="text" placeholder="Yazar soyadını giriniz" />
+                        <span asp-validation-for="WriterSurname" class="text-danger"></span>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit w-100">✅ Yazarı Güncelle</button>
+                </form>
+            </div>
+            <div class="form-footer">
+                <a href="/Writers/Index">← Yazar Listesine Dön</a>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

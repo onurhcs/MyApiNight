@@ -1,0 +1,101 @@
+﻿@model MyApiNight.WebUI.Dtos.Category.UpdateCategoryDto
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kategori Güncelle</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        body {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .category-form-container {
+            max-width: 500px;
+            margin: 50px auto;
+        }
+
+        .card {
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-header {
+            background: #6c5ce7;
+            color: #fff;
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            padding: 15px;
+        }
+
+        .form-label {
+            font-weight: 500;
+        }
+
+        .form-control {
+            border-radius: 5px;
+        }
+
+        .btn-submit {
+            background: #00b894;
+            border: none;
+            padding: 10px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+            .btn-submit:hover {
+                background: #019874;
+            }
+
+        .form-footer {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+            .form-footer a {
+                text-decoration: none;
+                color: #6c5ce7;
+                font-weight: bold;
+            }
+
+                .form-footer a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+<body>
+    <div class="container category-form-container">
+        <div class="card">
+            <div class="card-header">
+                🛠️ Kategori Güncelle
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    <input type="hidden" asp-for="CategoyId" />
+                    <div class="mb-4">
+                        <label for="CategoryName" class="form-label">Kategori Adı</label>
+                        <input asp-for="CategoryName" class="form-control" id="CategoryName" type="text" placeholder="Kategori adını giriniz" />
+                    </div>
+                    <button type="submit" class="btn btn-submit w-100">✅ Kategoriyi Güncelle</button>
+                </form>
+            </div>
+            <div class="form-footer">
+                <a href="/Categories/Index">← Kategori Listesine Dön</a>
+            </div>
+        </div>
+    </div>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>BookSaw - Ücretsiz Kitap Mağazası HTML CSS Şablonu</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="author" content="Onur Hacıosmanoğlu">
+	<meta name="keywords" content="Kitap Mağazası, Ücretsiz Kitap Şablonu, Online Kitap Satışı, HTML CSS Şablonu">
+	<meta name="description" content="BookSaw, modern ve kullanıcı dostu bir ücretsiz kitap mağazası HTML ve CSS şablonu sunar.">
+
+	<!-- Bootstrap CSS -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+	<!-- Stil Dosyaları -->
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
+	<link rel="stylesheet" type="text/css" href="css/vendor.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-target="#header" tabindex="0">
+
+	<div id="header-wrap">
+
+		<div class="top-content">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="social-links">
+							<ul>
+								<li>
+									<a href="#"><i class="icon icon-facebook"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon icon-twitter"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon icon-youtube-play"></i></a>
+								</li>
+								<li>
+									<a href="#"><i class="icon icon-behance-square"></i></a>
+								</li>
+							</ul>
+						</div><!--social-links-->
+					</div>
+					<div class="col-md-6">
+						<div class="right-element">
+							<a href="#" class="user-account for-buy"><i class="icon icon-user"></i><span>Hesabım</span></a>
+							<a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Sepet: (0 ₺)</span></a>
+	
+							<div class="action-menu">
+								<div class="search-bar">
+									<a href="#" class="search-button search-toggle" data-selector="#header-wrap">
+										<i class="icon icon-search"></i>
+									</a>
+									<form role="search" method="get" class="search-box">
+										<input class="search-field text search-input" placeholder="Arama Yapın"
+											type="search">
+									</form>
+								</div>
+							</div>
+						</div><!--top-right-->
+					</div>
+				</div>
+			</div>
+		</div><!--top-content-->
+	
+		<header id="header">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-md-2">
+						<div class="main-logo">
+							<a href="index.html"><img src="images/main-logo.png" alt="logo"></a>
+						</div>
+					</div>
+	
+					<div class="col-md-10">
+						<nav id="navbar">
+							<div class="main-menu stellarnav">
+								<ul class="menu-list">
+									<li class="menu-item active"><a href="#home">Ana Sayfa</a></li>
+									<li class="menu-item has-sub">
+										<a href="#pages" class="nav-link">Sayfalar</a>
+										<ul>
+											<li class="active"><a href="index.html">Ana Sayfa</a></li>
+											<li><a href="index.html">Hakkımızda</a></li>
+											<li><a href="index.html">Stilller</a></li>
+											<li><a href="index.html">Blog</a></li>
+											<li><a href="index.html">Tekil Gönderi</a></li>
+											<li><a href="index.html">Mağazamız</a></li>
+											<li><a href="index.html">Ürün Detayı</a></li>
+											<li><a href="index.html">İletişim</a></li>
+											<li><a href="index.html">Teşekkürler</a></li>
+										</ul>
+									</li>
+									<li class="menu-item"><a href="#featured-books" class="nav-link">Öne Çıkanlar</a></li>
+									<li class="menu-item"><a href="#popular-books" class="nav-link">Popüler</a></li>
+									<li class="menu-item"><a href="#special-offer" class="nav-link">Teklifler</a></li>
+									<li class="menu-item"><a href="#latest-blog" class="nav-link">Makaleler</a></li>
+									<li class="menu-item"><a href="#download-app" class="nav-link">Uygulamayı İndir</a></li>
+								</ul>
+	
+								<div class="hamburger">
+									<span class="bar"></span>
+									<span class="bar"></span>
+									<span class="bar"></span>
+								</div>
+							</div>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+	
+	</div><!--header-wrap-->
+	
+
+	<section id="billboard">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+	
+					<!-- Önceki Slider Butonu -->
+					<button class="prev slick-arrow">
+						<i class="icon icon-arrow-left"></i>
+					</button>
+	
+					<!-- Ana Slider -->
+					<div class="main-slider pattern-overlay">
+						<!-- Slider Öğesi 1 -->
+						<div class="slider-item">
+							<div class="banner-content">
+								<h2 class="banner-title">Vahşi Yaşamın İzleri</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
+									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
+									urna, a eu.</p>
+								<div class="btn-wrap">
+									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Daha Fazla Oku<i
+											class="icon icon-ns-arrow-right"></i></a>
+								</div>
+							</div><!--banner-content-->
+							<img src="images/main-banner1.jpg" alt="afiş" class="banner-image">
+						</div><!--slider-item-->
+	
+						<!-- Slider Öğesi 2 -->
+						<div class="slider-item">
+							<div class="banner-content">
+								<h2 class="banner-title">Kuşlar Mutlu Olacak</h2>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet, libero
+									ipsum enim pharetra hac. Urna commodo, lacus ut magna velit eleifend. Amet, quis
+									urna, a eu.</p>
+								<div class="btn-wrap">
+									<a href="#" class="btn btn-outline-accent btn-accent-arrow">Daha Fazla Oku<i
+											class="icon icon-ns-arrow-right"></i></a>
+								</div>
+							</div><!--banner-content-->
+							<img src="images/main-banner2.jpg" alt="afiş" class="banner-image">
+						</div><!--slider-item-->
+					</div><!--main-slider-->
+	
+					<!-- Sonraki Slider Butonu -->
+					<button class="next slick-arrow">
+						<i class="icon icon-arrow-right"></i>
+					</button>
+	
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="client-holder" data-aos="fade-up">
+		<div class="container">
+			<div class="row">
+				<div class="inner-content">
+					<div class="logo-wrap">
+						<div class="grid">
+							<a href="#"><img src="images/client-image1.png" alt="Müşteri Logosu 1"></a>
+							<a href="#"><img src="images/client-image2.png" alt="Müşteri Logosu 2"></a>
+							<a href="#"><img src="images/client-image3.png" alt="Müşteri Logosu 3"></a>
+							<a href="#"><img src="images/client-image4.png" alt="Müşteri Logosu 4"></a>
+							<a href="#"><img src="images/client-image5.png" alt="Müşteri Logosu 5"></a>
+						</div>
+					</div><!--logo-wrap-->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="featured-books" class="py-5 my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+	
+					<!-- Bölüm Başlığı -->
+					<div class="section-header align-center">
+						<div class="title">
+							<span>Seçkin Ürünler</span>
+						</div>
+						<h2 class="section-title">Öne Çıkan Kitaplar</h2>
+					</div>
+	
+					<!-- Ürün Listesi -->
+					<div class="product-list" data-aos="fade-up">
+						<div class="row">
+	
+							<!-- Ürün 1 -->
+							<div class="col-md-3">
+								<div class="product-item">
+									<figure class="product-style">
+										<img src="images/product-item1.jpg" alt="Kitap" class="product-item">
+										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+									</figure>
+									<figcaption>
+										<h3>Huzurlu Bir Yaşam Yolu</h3>
+										<span>Armor Ramsey</span>
+										<div class="item-price">₺ 40.00</div>
+									</figcaption>
+								</div>
+							</div>
+	
+							<!-- Ürün 2 -->
+							<div class="col-md-3">
+								<div class="product-item">
+									<figure class="product-style">
+										<img src="images/product-item2.jpg" alt="Kitap" class="product-item">
+										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+									</figure>
+									<figcaption>
+										<h3>Çölde Muhteşem Bir Seyahat</h3>
+										<span>Sanchit Howdy</span>
+										<div class="item-price">₺ 38.00</div>
+									</figcaption>
+								</div>
+							</div>
+	
+							<!-- Ürün 3 -->
+							<div class="col-md-3">
+								<div class="product-item">
+									<figure class="product-style">
+										<img src="images/product-item3.jpg" alt="Kitap" class="product-item">
+										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+									</figure>
+									<figcaption>
+										<h3>Güzel Scarlett Hanım</h3>
+										<span>Arthur Doyle</span>
+										<div class="item-price">₺ 45.00</div>
+									</figcaption>
+								</div>
+							</div>
+	
+							<!-- Ürün 4 -->
+							<div class="col-md-3">
+								<div class="product-item">
+									<figure class="product-style">
+										<img src="images/product-item4.jpg" alt="Kitap" class="product-item">
+										<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+									</figure>
+									<figcaption>
+										<h3>Bir Zamanlar</h3>
+										<span>Klien Marry</span>
+										<div class="item-price">₺ 35.00</div>
+									</figcaption>
+								</div>
+							</div>
+	
+						</div><!-- Ürünler Bitiş -->
+					</div><!-- Ürün Listesi Bitiş -->
+	
+				</div>
+			</div>
+	
+			<!-- Tüm Ürünleri Gör Butonu -->
+			<div class="row">
+				<div class="col-md-12">
+					<div class="btn-wrap align-right">
+						<a href="#" class="btn-accent-arrow">Tüm Ürünleri Gör <i class="icon icon-ns-arrow-right"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="best-selling" class="leaf-pattern-overlay">
+		<div class="corner-pattern-overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+	
+				<div class="col-md-8">
+	
+					<div class="row">
+	
+						<!-- Kitap Görseli -->
+						<div class="col-md-6">
+							<figure class="products-thumb">
+								<img src="images/single-image.jpg" alt="Kitap" class="single-image">
+							</figure>
+						</div>
+	
+						<!-- Kitap Detayları -->
+						<div class="col-md-6">
+							<div class="product-entry">
+								<h2 class="section-title divider">En Çok Satan Kitap</h2>
+	
+								<div class="products-content">
+									<div class="author-name">Yazar: Timbur Hood</div>
+									<h3 class="item-title">Kuşlar Mutlu Olacak</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu feugiat amet,
+										libero ipsum enim pharetra hac.</p>
+									<div class="item-price">₺ 45.00</div>
+									<div class="btn-wrap">
+										<a href="#" class="btn-accent-arrow">Hemen Satın Al <i
+												class="icon icon-ns-arrow-right"></i></a>
+									</div>
+								</div>
+	
+							</div>
+						</div>
+	
+					</div>
+					<!-- / row -->
+	
+				</div>
+	
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="popular-books" class="bookshelf py-5 my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+	
+					<!-- Bölüm Başlığı -->
+					<div class="section-header align-center">
+						<div class="title">
+							<span>Seçkin Kitaplar</span>
+						</div>
+						<h2 class="section-title">Popüler Kitaplar</h2>
+					</div>
+	
+					<!-- Sekmeler -->
+					<ul class="tabs">
+						<li data-tab-target="#all-genre" class="active tab">Tüm Türler</li>
+						<li data-tab-target="#business" class="tab">İş Dünyası</li>
+						<li data-tab-target="#technology" class="tab">Teknoloji</li>
+						<li data-tab-target="#romantic" class="tab">Romantik</li>
+						<li data-tab-target="#adventure" class="tab">Macera</li>
+						<li data-tab-target="#fictional" class="tab">Kurgusal</li>
+					</ul>
+	
+					<!-- Sekme İçerikleri -->
+					<div class="tab-content">
+						<!-- Tüm Türler -->
+						<div id="all-genre" data-tab-content class="active">
+							<div class="row">
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item1.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Portre Fotoğrafçılığı</h3>
+											<span>Adam Silber</span>
+											<div class="item-price">₺ 40.00</div>
+										</figcaption>
+									</div>
+								</div>
+	
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item2.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Bir Zamanlar</h3>
+											<span>Klien Marry</span>
+											<div class="item-price">₺ 35.00</div>
+										</figcaption>
+									</div>
+								</div>
+	
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item3.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Basit Yaşam Tüyoları</h3>
+											<span>Bratt Smith</span>
+											<div class="item-price">₺ 40.00</div>
+										</figcaption>
+									</div>
+								</div>
+	
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item4.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Dış Dünyadan Esintiler</h3>
+											<span>Nicole Wilson</span>
+											<div class="item-price">₺ 40.00</div>
+										</figcaption>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<!-- İş Dünyası -->
+						<div id="business" data-tab-content>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item5.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Huzurlu Aydınlanma</h3>
+											<span>Marmik Lama</span>
+											<div class="item-price">₺ 40.00</div>
+										</figcaption>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Teknoloji -->
+						<div id="technology" data-tab-content>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item6.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Çölde Muhteşem Seyahat</h3>
+											<span>Sanchit Howdy</span>
+											<div class="item-price">₺ 40.00</div>
+										</figcaption>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Romantik -->
+						<div id="romantic" data-tab-content>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item7.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Basit Bir Yaşam Yolu</h3>
+											<span>Armor Ramsey</span>
+											<div class="item-price">₺ 40.00</div>
+										</figcaption>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+						<!-- Macera -->
+						<div id="adventure" data-tab-content>
+							<div class="row">
+								<div class="col-md-3">
+									<div class="product-item">
+										<figure class="product-style">
+											<img src="images/tab-item8.jpg" alt="Kitap" class="product-item">
+											<button type="button" class="add-to-cart">Sepete Ekle</button>
+										</figure>
+										<figcaption>
+											<h3>Korsanların Arasında Bir Yaşam</h3>
+											<span>Armor Ramsey</span>
+											<div class="item-price">₺ 40.00</div>
+										</figcaption>
+									</div>
+								</div>
+							</div>
+						</div>
+	
+					</div><!-- Tab İçerikleri Bitiş -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="quotation" class="align-center pb-5 mb-5">
+		<div class="inner-content">
+			<h2 class="section-title divider">Günün Sözü</h2>
+			<blockquote data-aos="fade-up">
+				<q>“Ne kadar çok okursan, o kadar çok şey öğrenirsin. Ne kadar çok öğrenirsen, o kadar çok yere gidersin.”</q>
+				<div class="author-name">Dr. Seuss</div>
+			</blockquote>
+		</div>
+	</section>
+	
+	<section id="special-offer" class="bookshelf pb-5 mb-5">
+
+		<!-- Bölüm Başlığı -->
+		<div class="section-header align-center">
+			<div class="title">
+				<span>Fırsatı Kaçırmayın</span>
+			</div>
+			<h2 class="section-title">İndirimli Kitaplar</h2>
+		</div>
+	
+		<div class="container">
+			<div class="row">
+				<div class="inner-content">
+					<div class="product-list" data-aos="fade-up">
+						<div class="grid product-grid">
+						
+							<!-- Ürün 1 -->
+							<div class="product-item">
+								<figure class="product-style">
+									<img src="images/product-item5.jpg" alt="Kitap" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+								</figure>
+								<figcaption>
+									<h3>Huzurlu Bir Yaşam Yolu</h3>
+									<span>Armor Ramsey</span>
+									<div class="item-price">
+										<span class="prev-price">₺ 50.00</span> ₺ 40.00
+									</div>
+								</figcaption>
+							</div>
+	
+							<!-- Ürün 2 -->
+							<div class="product-item">
+								<figure class="product-style">
+									<img src="images/product-item6.jpg" alt="Kitap" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+								</figure>
+								<figcaption>
+									<h3>Çölde Muhteşem Seyahat</h3>
+									<span>Sanchit Howdy</span>
+									<div class="item-price">
+										<span class="prev-price">₺ 30.00</span> ₺ 38.00
+									</div>
+								</figcaption>
+							</div>
+	
+							<!-- Ürün 3 -->
+							<div class="product-item">
+								<figure class="product-style">
+									<img src="images/product-item7.jpg" alt="Kitap" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+								</figure>
+								<figcaption>
+									<h3>Güzel Scarlett Hanım</h3>
+									<span>Arthur Doyle</span>
+									<div class="item-price">
+										<span class="prev-price">₺ 35.00</span> ₺ 45.00
+									</div>
+								</figcaption>
+							</div>
+	
+							<!-- Ürün 4 -->
+							<div class="product-item">
+								<figure class="product-style">
+									<img src="images/product-item8.jpg" alt="Kitap" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+								</figure>
+								<figcaption>
+									<h3>Bir Zamanlar</h3>
+									<span>Klien Marry</span>
+									<div class="item-price">
+										<span class="prev-price">₺ 25.00</span> ₺ 35.00
+									</div>
+								</figcaption>
+							</div>
+	
+							<!-- Ürün 5 -->
+							<div class="product-item">
+								<figure class="product-style">
+									<img src="images/product-item2.jpg" alt="Kitap" class="product-item">
+									<button type="button" class="add-to-cart" data-product-tile="add-to-cart">Sepete Ekle</button>
+								</figure>
+								<figcaption>
+									<h3>Huzurlu Bir Yaşam Yolu</h3>
+									<span>Armor Ramsey</span>
+									<div class="item-price">₺ 40.00</div>
+								</figcaption>
+							</div>
+						</div><!--grid-->
+					</div>
+				</div><!--inner-content-->
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="subscribe">
+		<div class="container">
+			<div class="row justify-content-center">
+	
+				<div class="col-md-8">
+					<div class="row">
+	
+						<!-- Başlık Bölümü -->
+						<div class="col-md-6">
+							<div class="title-element">
+								<h2 class="section-title divider">Bültenimize Abone Olun</h2>
+							</div>
+						</div>
+	
+						<!-- Abonelik Formu -->
+						<div class="col-md-6">
+							<div class="subscribe-content" data-aos="fade-up">
+								<p>Güncel haberler ve özel fırsatlardan haberdar olmak için bültenimize abone olun.</p>
+								<form id="form">
+									<input type="email" name="email" placeholder="E-posta adresinizi girin" required>
+									<button class="btn-subscribe">
+										<span>Gönder</span>
+										<i class="icon icon-send"></i>
+									</button>
+								</form>
+							</div>
+						</div>
+	
+					</div>
+				</div>
+	
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="latest-blog" class="py-5 my-5">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+	
+					<!-- Bölüm Başlığı -->
+					<div class="section-header align-center">
+						<div class="title">
+							<span>Makalelerimizi Okuyun</span>
+						</div>
+						<h2 class="section-title">Son Makaleler</h2>
+					</div>
+	
+					<div class="row">
+	
+						<!-- Makale 1 -->
+						<div class="col-md-4">
+							<article class="column" data-aos="fade-up">
+								<figure>
+									<a href="#" class="image-hvr-effect">
+										<img src="images/post-img1.jpg" alt="Makale Görseli" class="post-image">
+									</a>
+								</figure>
+								<div class="post-item">
+									<div class="meta-date">30 Mart 2021</div>
+									<h3><a href="#">Kitap Okumak Her Zaman Anları Mutlu Kılar</a></h3>
+	
+									<div class="links-element">
+										<div class="categories">İlham</div>
+										<div class="social-links">
+											<ul>
+												<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+											</ul>
+										</div>
+									</div><!-- links-element -->
+	
+								</div>
+							</article>
+						</div>
+	
+						<!-- Makale 2 -->
+						<div class="col-md-4">
+							<article class="column" data-aos="fade-up" data-aos-delay="200">
+								<figure>
+									<a href="#" class="image-hvr-effect">
+										<img src="images/post-img2.jpg" alt="Makale Görseli" class="post-image">
+									</a>
+								</figure>
+								<div class="post-item">
+									<div class="meta-date">29 Mart 2021</div>
+									<h3><a href="#">Kitap Okumak Her Zaman Anları Mutlu Kılar</a></h3>
+	
+									<div class="links-element">
+										<div class="categories">İlham</div>
+										<div class="social-links">
+											<ul>
+												<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+											</ul>
+										</div>
+									</div><!-- links-element -->
+	
+								</div>
+							</article>
+						</div>
+	
+						<!-- Makale 3 -->
+						<div class="col-md-4">
+							<article class="column" data-aos="fade-up" data-aos-delay="400">
+								<figure>
+									<a href="#" class="image-hvr-effect">
+										<img src="images/post-img3.jpg" alt="Makale Görseli" class="post-image">
+									</a>
+								</figure>
+								<div class="post-item">
+									<div class="meta-date">27 Şubat 2021</div>
+									<h3><a href="#">Kitap Okumak Her Zaman Anları Mutlu Kılar</a></h3>
+	
+									<div class="links-element">
+										<div class="categories">İlham</div>
+										<div class="social-links">
+											<ul>
+												<li><a href="#"><i class="icon icon-facebook"></i></a></li>
+												<li><a href="#"><i class="icon icon-twitter"></i></a></li>
+												<li><a href="#"><i class="icon icon-behance-square"></i></a></li>
+											</ul>
+										</div>
+									</div><!-- links-element -->
+	
+								</div>
+							</article>
+						</div>
+	
+					</div>
+	
+					<!-- Tüm Makaleleri Gör Butonu -->
+					<div class="row">
+						<div class="btn-wrap align-center">
+							<a href="#" class="btn btn-outline-accent btn-accent-arrow" tabindex="0">
+								Tüm Makaleleri Gör<i class="icon icon-ns-arrow-right"></i>
+							</a>
+						</div>
+					</div>
+	
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<section id="download-app" class="leaf-pattern-overlay">
+		<div class="corner-pattern-overlay"></div>
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="row">
+	
+						<!-- Telefon Görseli -->
+						<div class="col-md-5">
+							<figure>
+								<img src="images/device.png" alt="Telefon Görseli" class="single-image">
+							</figure>
+						</div>
+	
+						<!-- Uygulama Bilgileri -->
+						<div class="col-md-7">
+							<div class="app-info">
+								<h2 class="section-title divider">Uygulamamızı Hemen İndirin!</h2>
+								<p>
+									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed turpis libero, lectus non posuere. 
+									Amet sed lorem posuere sit iaculis amet, ac urna. Adipiscing fames semper erat ac in suspendisse iaculis.
+								</p>
+								<div class="google-app">
+									<a href="#"><img src="images/google-play.jpg" alt="Google Play"></a>
+									<a href="#"><img src="images/app-store.jpg" alt="App Store"></a>
+								</div>
+							</div>
+						</div>
+	
+					</div><!-- row -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+	<footer id="footer">
+		<div class="container">
+			<div class="row">
+	
+				<!-- Şirket Hakkında -->
+				<div class="col-md-4">
+					<div class="footer-item">
+						<div class="company-brand">
+							<img src="images/main-logo.png" alt="Logo" class="footer-logo">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sagittis sed turpis libero, lectus non posuere. 
+								Amet sed lorem posuere sit iaculis amet, ac urna. Adipiscing fames semper erat ac in suspendisse iaculis.</p>
+						</div>
+					</div>
+				</div>
+	
+				<!-- Hakkımızda -->
+				<div class="col-md-2">
+					<div class="footer-menu">
+						<h5>Hakkımızda</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Vizyonumuz</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Makaleler</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Kariyer</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Hizmet Şartları</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Bağış Yap</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<!-- Keşfet -->
+				<div class="col-md-2">
+					<div class="footer-menu">
+						<h5>Keşfet</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Ana Sayfa</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Kitaplar</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Yazarlar</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Kategoriler</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Gelişmiş Arama</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<!-- Hesabım -->
+				<div class="col-md-2">
+					<div class="footer-menu">
+						<h5>Hesabım</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Giriş Yap</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Sepetimi Görüntüle</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">İstek Listem</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Siparişimi Takip Et</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+				<!-- Yardım -->
+				<div class="col-md-2">
+					<div class="footer-menu">
+						<h5>Yardım</h5>
+						<ul class="menu-list">
+							<li class="menu-item">
+								<a href="#">Yardım Merkezi</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Sorun Bildir</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Düzenleme Önerisi</a>
+							</li>
+							<li class="menu-item">
+								<a href="#">Bize Ulaşın</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+	
+			</div>
+			<!-- / row -->
+		</div>
+	</footer>
+	
+
+	<div id="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+	
+					<div class="copyright">
+						<div class="row">
+	
+							<!-- Telif Hakkı Bilgisi -->
+							<div class="col-md-6">
+								<p>© 2024 Tüm Hakları Saklıdır. Ücretsiz HTML Şablonu: 
+									<a href="https://www.templatesjungle.com/" target="_blank">TemplatesJungle</a>
+								</p>
+							</div>
+	
+							<!-- Sosyal Medya Bağlantıları -->
+							<div class="col-md-6">
+								<div class="social-links align-right">
+									<ul>
+										<li>
+											<a href="#"><i class="icon icon-facebook"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-twitter"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-youtube-play"></i></a>
+										</li>
+										<li>
+											<a href="#"><i class="icon icon-behance-square"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+	
+						</div>
+					</div><!-- grid -->
+	
+				</div><!-- footer-bottom-content -->
+			</div>
+		</div>
+	</div>
+	
+
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+	<script src="js/plugins.js"></script>
+	<script src="js/script.js"></script>
+
+</body>
+
+</html>
